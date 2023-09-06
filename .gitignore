@@ -1,0 +1,16 @@
+# Node.js / Express
+node_modules/
+npm-debug.log
+
+# Environment files
+.env
+
+# Visual Studio Code
+.vscode/
+
+# Editor-specific files
+.idea/
+.DS_Store
+
+# Logs
+logs/
