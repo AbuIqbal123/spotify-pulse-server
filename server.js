@@ -15,7 +15,7 @@ const {
   SPOTIFY_REDIRECT_URI,
 } = process.env;
 
-const allowedOrigins = [clientURL, 'https://your-heroku-app.herokuapp.com'];
+const allowedOrigins = [clientURL, 'https://spotify-pulse-server-e685bcad0165.herokuapp.com'];
 
 app.use(
   cors({
@@ -101,7 +101,7 @@ app.get('/callback', async (req, res) => {
     req.session.access_token = access_token;
     req.session.refresh_token = refresh_token;
 
-    res.redirect(`http://localhost:3000/callback?access_token=${access_token}`);
+    res.redirect(`https:spotify-pulse.netlify.app/callback?access_token=${access_token}`);
   } catch (error) {
     res.redirect('/error');
   }
