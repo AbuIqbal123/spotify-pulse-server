@@ -101,7 +101,7 @@ app.get('/callback', async (req, res) => {
     req.session.access_token = access_token;
     req.session.refresh_token = refresh_token;
 
-    res.redirect(`https:spotify-pulse.netlify.app/callback?access_token=${access_token}`);
+    res.redirect(`https:spotify-pulse.netlify.app/#callback?access_token=${access_token}`);
   } catch (error) {
     res.redirect('/error');
   }
